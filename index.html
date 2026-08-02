@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>第一屆 辦公室滑椅甩尾大賽 — RED SPACE TAIPEI</title>
+  <meta name="description" content="坐不住的你，來挑戰極限。滑動捲軸，飛越 RED SPACE B1 的滑椅甩尾賽道。9/3（四）19:30。" />
+  <meta property="og:title" content="第一屆 辦公室滑椅甩尾大賽" />
+  <meta property="og:description" content="一場滑椅甩尾的速度對決！誰能穩坐王者寶座？9/3（四）19:30 @ RED SPACE TAIPEI B1" />
+  <style>
+    html, body { margin: 0; padding: 0; background: #0A0A0C; }
+    /* 深色電競主題 — 對應生成場景的黑底紅光 */
+    :root, .sw-root {
+      --sw-bg: #0A0A0C;
+      --sw-ink: #F2F4F7;
+      --sw-ink-soft: #9AA3AE;
+      --sw-accent: #E01F26;
+      --sw-font-display: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      --sw-font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    }
+    /* 讓標題字串裡的 \n 真的換行（引擎會 HTML-escape，所以不能用 <br>） */
+    .sw-copy__title { white-space: pre-line; }
+    /* 「立即報名」主要按鈕改成品牌紅（引擎預設是 --sw-ink 近白色）*/
+    .sw-btn--primary, .sw-topcta {
+      background: #E01F26;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(224, 31, 38, .35);
+    }
+    .sw-btn--primary:hover, .sw-topcta:hover { background: #F03A41; }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    var REG = 'https://forms.gle/bWbhP5GCKiDiDLrr7';  // 報名表單
+    var LINE = 'https://lin.ee/YpFdYDZ';              // LINE 詢問場地
+
+    mountScrollWorld(document.getElementById('world'), {
+      brand: { name: '辦公室滑椅甩尾大賽', href: '#top' },
+      cta: { label: '立即報名', href: REG },
+      hint: '往下滑，開始甩尾',
+      nav: true,
+      atmosphere: true,
+      diveScroll: 1.35,
+      crossfade: 0.08,
+      sections: [
+        {
+          id: 'office', label: '起點',
+          still: 'assets/still/p1.jpg', stillMobile: 'assets/still/p1-m.jpg',
+          clip: 'assets/vid/leg0.mp4', clipMobile: 'assets/vid/leg0-m.mp4',
+          accent: '#E01F26',
+          scroll: 1.5, linger: 0.4,
+          eyebrow: '第一屆・辦公室滑椅甩尾大賽',
+          title: '坐不住的你，來挑戰極限。',
+          body: '你每天坐八小時的那張椅子，其實一直在等一條賽道。',
+          tags: ['9/3（四）19:30', 'RED SPACE TAIPEI B1'],
+        },
+        {
+          id: 'checkin', label: '報到',
+          still: 'assets/still/p2.jpg', stillMobile: 'assets/still/p2-m.jpg',
+          clip: 'assets/vid/leg1.mp4', clipMobile: 'assets/vid/leg1-m.mp4',
+          accent: '#29E0FF',
+          eyebrow: '報到區',
+          title: '領號碼、戴安全帽、選你的戰椅。',
+          body: '報名費 1,000 元／人，現場備妥所有裝備，人到就好。',
+          tags: ['安全帽全程配戴', '賽道導覽同場加映'],
+        },
+        {
+          id: 'start', label: '起跑',
+          still: 'assets/still/p3.jpg', stillMobile: 'assets/still/p3-m.jpg',
+          clip: 'assets/vid/leg2.mp4', clipMobile: 'assets/vid/leg2-m.mp4',
+          accent: '#FFB020',
+          eyebrow: '起跑線',
+          title: '五盞紅燈熄滅的那一秒。',
+          body: '同時起跑，靠腳蹬、靠慣性、靠你當年打電動練出來的那點手感。',
+          tags: ['分組競速', '創意關卡挑戰'],
+        },
+        {
+          id: 'drift', label: '甩尾彎',
+          still: 'assets/still/p4.jpg', stillMobile: 'assets/still/p4-m.jpg',
+          clip: 'assets/vid/leg3.mp4', clipMobile: 'assets/vid/leg3-m.mp4',
+          accent: '#E01F26',
+          scroll: 1.7, linger: 0.5,
+          eyebrow: '甩尾彎道',
+          title: '入彎不減速，才叫甩尾。',
+          body: '紅白護欄、輪痕、火花——這一彎決定誰上頒獎台。',
+          tags: ['滑椅甩尾', '注意安全，甩尾有風險'],
+        },
+        {
+          id: 'crowd', label: '觀眾席',
+          still: 'assets/still/p5.jpg', stillMobile: 'assets/still/p5-m.jpg',
+          clip: 'assets/vid/leg4.mp4', clipMobile: 'assets/vid/leg4-m.mp4',
+          accent: '#29E0FF',
+          eyebrow: '觀眾席',
+          title: '不參賽，也能來現場鬼吼。',
+          body: '兩側看台開放觀戰，團隊同樂，笑聲不斷，留下最嗆的辦公室回憶。',
+          tags: ['歡迎揪同事', '免費觀戰'],
+        },
+        {
+          id: 'podium', label: '頒獎台',
+          still: 'assets/still/p6.jpg', stillMobile: 'assets/still/p6-m.jpg',
+          clip: 'assets/vid/leg5.mp4', clipMobile: 'assets/vid/leg5-m.mp4',
+          accent: '#FFB020',
+          scroll: 1.8, linger: 0.55,
+          eyebrow: '誰能穩坐王者寶座？',
+          title: '冠軍 5,000\n亞軍 3,000\n季軍 1,000',
+          body: '名額有限，報名要快。一起來滑椅，一起創造最有梗的辦公室傳奇。',
+          tags: [],
+          cta: {
+            primary:   { label: '立即報名', href: REG },
+            secondary: { label: 'LINE 詢問場地', href: LINE },
+          },
+        },
+      ],
+      // 架構 A：連續前進單鏡頭，沒有 connector — 每段 leg 本身就是旅程
+      connectors: [],
+    });
+  </script>
+</body>
+</html>
